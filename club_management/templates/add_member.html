@@ -17,38 +17,38 @@
      color: #000;
    }
   </style>
-<h2>Clubs Members</h2>
+<h2><span style="color:green">Clubs</span> Members</h2>
 <div class="container" >
-    <div class="row">
-      <div class="col-2"></div>
-      <div class="col-4">
-        <div class=" card"
-          style="width: 800px;border-radius: 10px; box-shadow: 0 40px 15px 0 rgba(0, 0, 0, 0.2);  font-weight: 600;  height: 800px;">
-          <div class="content-section">
-            <div class="card-body" style="text-align: center;">
+    <div class="card-row">
+      <!-- <div class="col-2"></div> -->
+      <!-- <div class="col-4"> -->
+        <div class=" card-body" >
+          <div class=" card">
+            <div class="card-body" style="box-shadow: 0 40px 15px 0 rgba(0, 0, 0, 0.2);">
                 {% if form.errors %}
                 <p style="color:rgb(197, 191, 191)"></p>
                 {% endif %}
-                <div class="panel panel-default">
+                <!-- <div class="panel panel-default"> -->
                   <div class="">
-                    <h3 class="text-center" style="color: blue; font-weight:bold;">Members</h3>
+                    <h3 class="text-left" style="color: green; font-weight:light;">Members</h3>
                   </div>
-                  <div class="">
-                    <form style="color: #000;" method="post">
+                  <!-- <div class=""> -->
+                    <form style="height:auto; justify-content: space-between;" method="post" class="form-group">
                       {% csrf_token %}
-                      {{form}}
-                      <button style="background-color:#9CC4DD; color: rgb(24, 35, 131);" class="btn" type="submit">Register</button>
+                      {% bootstrap_form form %}
+                      <br>
+                      <button style="" class="btn btn-success" type="submit">Register</button>
                     </form>
-                          </div>
-                      </div>
-                      
+                          <!-- </div> -->
+                      <!-- </div> -->
+
                   </div>
-                  
-            </div>
+
+            <!-- </div> -->
           </div>
-        </div>
+        <!-- </div> -->
       </div>
-      <div class="col-4"></div>
+      <!-- <div class="col-4"></div> -->
     </div>
   </div>
 

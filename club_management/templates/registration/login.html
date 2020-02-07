@@ -1,43 +1,35 @@
-{%extends "registration/base.html"%}
+{%extends "registration/base.html" %}
 {% load bootstrap4 %}
 {% block content %}
 
-<div class="container" >
-        <div class="row sign-up top-margin">
-          <div class="col-md-1">
-            <!-- Empty div -->
-          </div>
-          <div class="col-md-4">
-    
-            <div class="logoname" style="display:inline">
-             </div>
-    
-          </div>
-            <div class="col-md-4">
+<div class="container" style="padding-top:4%">
+        <div class="card sign-up top-margin" >
+
+            <div class="card-body">
                 {% if form.errors %}
                 <p class="small">Password or Username is incorrect</p>
                 {% endif %}
-                <div class="section">
+                <!-- <div class="section"> -->
                     <div class="mylogo">
                     </div>
-                    <div class="form-section" id="login" style="background-color: black" >
+                    <div class="form-section" id="login" style="background-color: " >
                         <form action="/accounts/login/" method="POST" style="color: white">
                             {% csrf_token %}
                             {% bootstrap_form form %}
                             <div class="form-group">
-                                <input type="submit" class="btn btn-primary btn-sm" value="Log in">
+                                <input type="submit" class="btn btn-success btn-sm" value="Log in">
                             </div>
                             <input type="hidden" name="next" value="/">
                         </form>
                     </div>
-    
-                    <p class="forgot" style="color: black">Forgot Password?</p>
-                </div>
-                <div class="section" style="color: black">
-                  <p>Don't have an account? <a href="/accounts/register/" class="btn btn-default">Sign Up</a></p>
-                  
-    
-    
+
+                    <p class="forgot" style="color: ">Forgot Password?</p>
+                <!-- </div> -->
+                <div class="section" style="color: ">
+                  <p>Don't have an account? <a href="/accounts/register/" class="btn btn-default"><span style="color:green;">Sign</span> Up</a></p>
+
+
+
                     <!-- <p class="forgot">Don't have an account? <a href="/signup/">Sign-Up</a></p> -->
                 </div>
             </div>

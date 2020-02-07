@@ -1,16 +1,49 @@
 <!-- should not be there -->
+
 {% extends "clubs/base.html" %}
-{% load bootstrap4 %} 
+{% load static %}
+{% load bootstrap4 %}
 {% bootstrap_css %}
 {% bootstrap_javascript jquery='full' %} {# Embed Bootstrap JS+jQuery #}
 {% block content %}
 
+<html>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'assets/css/material-dashboard.css?v=2.1.1'%}">
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <!-- <link href="{% static 'assets/demo/demo.css'%}" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="{% static 'assets/css/material-dashboard.css?v=2.1.1' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 
 <div class="col-md-2"></div>
-<div class="col-md-8" >  
-    <h1>Club Portal</h1>
-    <button> <a href="{% url 'new-official' %}">Add official</a> </button>
-    <button> <a href="{% url 'new-member' %}">Add Member</a> </button>
+<div class="col-md-8" >
+    <h1><span style="color:green">Club</span> Portal</h1>
+    <button> <a href="{% url 'new-official' %}"><span style="color:green">Add</span> <span style="color:black">official</span></a> </button>
+    <button> <a href="{% url 'new-member' %}"><span style="color:green">Add</span> Member</a> </button>
 </div>
 
 

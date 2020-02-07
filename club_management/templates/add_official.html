@@ -25,25 +25,25 @@
         <div class=" card"
           style="width: 800px;border-radius: 10px; box-shadow: 0 40px 15px 0 rgba(0, 0, 0, 0.2);  font-weight: 600;  height: 800px;">
           <div class="content-section">
-            <div class="card-body" style="text-align: center;">
+            <div class="card-body" style="text-align: left;">
                 {% if form.errors %}
                 <p style="color:rgb(197, 191, 191)"></p>
                 {% endif %}
                 <div class="panel panel-default">
                   <div class="">
-                    <h3 class="text-center" style="color: blue; font-weight:bold;">Club Official</h3>
+                    <h3 class="text-left" style="color: black; font-weight:light;"><span style="color:green">Club</span> Official</h3>
                   </div>
                   <div class="">
-                    <form style="color: #000;" method="post">
+                    <form style="color: #000; padding-bottom:8%;" method="post">
                       {% csrf_token %}
-                      {{form}}
-                      <button style="background-color:#9CC4DD; color: rgb(24, 35, 131);" class="btn" type="submit">Register</button>
+                      {% bootstrap_form form %}
+                      <button style="" class="btn btn-success" type="submit">Register</button>
                     </form>
                           </div>
                       </div>
-                      
+
                   </div>
-                  
+
             </div>
           </div>
         </div>

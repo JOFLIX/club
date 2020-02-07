@@ -16,30 +16,30 @@
     <div class="row card-body card-fluid"  style="width:auto; padding-left:12em;">
 
             <div class="col-md-1"></div>
-        
+
                 <div class="col-md-10">
                     <table class=" table table-bordered table-striped">
-                        <thead>
-                            <tr style="background-color:#9CC4DD;">
+                        <thead style="width:auto;">
+                            <tr style="background-color:green;">
                                 <th>Number</th>
                                 <th>Club</th>
                                 <th>Institution</th>
-                            
+
                             </tr>
                         </thead>
                         <tbody>
-                            {% for detail in details %} 
-                            
-        
+                            {% for detail in details %}
+
+
                             <tr>
                                 <td>{{detail.id}}  </td>
-                                
+
                                 <td>{{detail.club_name}}</td>
-                                
+
 
                                 <td>{{detail.institution}}</td>
-                                
-                                
+
+
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -47,10 +47,10 @@
                     <div class="col-md-1"></div>
                 </div>
             </div>
-        
+
 
 
     {% endblock %}
-    
+
 </body>
 </html>

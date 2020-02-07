@@ -1,17 +1,18 @@
 {%extends "registration/base.html"%}
+{% load static %}
 {% load bootstrap4 %}
 
 
 {% block content %}
-<div class="container" >
+<div class="container card-body" >
         <div class="row">
-            <div class="col-md-2"><br><br>
-                <h4></h4>
-                
-                
-            </div>
-            <div class="col-md-4 top-margin">
-                <h1 style="text-align: center" >Club-Manangement system.</h1>
+          <!-- <div class=""> -->
+<!--
+            <div class="col-2"><br>
+
+            </div> -->
+            <div class="col top-margin card-body" style="">
+                <h1 style="text-align: center" ><span style="color:green">Club-Manag</span>ement system.</h1>
                 {% if form.errors %}
                     <p>Some information may be incorrect</p>
                 {% endif %}
@@ -24,7 +25,7 @@
                                 {% csrf_token %}
                                 {% bootstrap_form form %}
                                 <div class="form-group">
-                                    <input type="submit" class="btn btn-primary btn-sm" value="Sign up">
+                                    <input type="submit" class="btn btn-success btn-sm" value="Sign up">
                                 </div>
                             </form>
                         </div>
@@ -34,7 +35,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="col-2">
+
+            </div>
+        <!-- </div> -->
     </div>
 
 
